@@ -17,11 +17,6 @@ void experiment::set_byte_sizes(const std::vector<unsigned int>& size_cash) {
   current_size /= 2;
   byte_sizes.push_back(current_size);
 }
-void experiment::print_size() const {
-  for (size_t i = 0; i < byte_sizes.size(); ++i){
-    std::cout << byte_sizes[i] << std::endl;
-  }
-}
 void experiment::create_arr(const unsigned int& size_in_byte) {
   arr.clear();
   unsigned int size = size_in_byte / sizeof(unsigned int);
@@ -84,7 +79,6 @@ void experiment::direct(const unsigned int& byte_size) {
       std::chrono::system_clock::now();
   std::chrono::duration<double> time = (end-start)/(iterations*(size/16));
   print_to_report(byte_size, time.count()/* total_time*/);
-  //std::cout << std::to_string(time.count() * nano_sec) << std::endl;
 }
 
 void experiment::print_to_report(const unsigned& byte_size, double time)
@@ -114,7 +108,6 @@ void experiment::reverse(const unsigned int& byte_size) {
     warm_up_cash(byte_size);
     std::chrono::system_clock::time_point start =
         std::chrono::system_clock::now();
-    //std::cout << std::endl << " int_size = " << int_size << std::endl;
     for (unsigned k=0; k < iterations; ++k){
       for (int i=static_cast<int>(size-1); i > 0; i -= 16)
       {
@@ -124,7 +117,6 @@ void experiment::reverse(const unsigned int& byte_size) {
     std::chrono::system_clock::time_point end =
         std::chrono::system_clock::now();
     std::chrono::duration<double> time = (end-start)/(iterations*(size/16));
-    //std::cout << "Reverse run: " << byte_size/1024 << " KB" << std::endl;
     print_to_report(byte_size, time.count());
   }
 }
@@ -135,7 +127,6 @@ void experiment::random(const unsigned int& byte_size) {
   warm_up_cash(byte_size);
   std::chrono::system_clock::time_point start =
       std::chrono::system_clock::now();
-  //std::cout << std::endl << " int_size = " << int_size << std::endl;
   for (unsigned k = 0; k < iterations; ++k){
     for (int i=static_cast<int>(size-1); i > 0; i-=16)
     {

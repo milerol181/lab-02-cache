@@ -18,7 +18,6 @@ TEST(Example, second) {
   cash_size.push_back(size_l3);
   experiment cash;
   cash.set_byte_sizes(cash_size);
-  cash.print_size();
   cash.main_experiment();
   std::cout << cash.getOut().str() << std::endl;
   EXPECT_TRUE(true);

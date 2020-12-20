@@ -13,7 +13,6 @@
 class experiment {
  public:
   void set_byte_sizes(const std::vector<unsigned int> &size_cash);
-  void print_size() const;
   void create_arr(const unsigned int &size_in_byte);
   void warm_up_cash(const unsigned int &size_in_byte);
   void main_experiment();
