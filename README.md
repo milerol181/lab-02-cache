@@ -342,6 +342,7 @@ investigation:
         duration: 11 nano seconds
 ...
 ```
+![results](./images/results.jpg)
 
 ### Рекомендации
 
