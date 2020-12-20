@@ -339,9 +339,11 @@ investigation:
       input data:
         buffer_size: 6 MB
       results:
-        duration: 11 nano seconds
+        duration: 11 nano seconds  
 ...
 ```
+![result](./images/results.jpg)
+
 
 
 ### Рекомендации
