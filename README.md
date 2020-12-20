@@ -132,27 +132,215 @@ cache_size['3'] = 8 mb;
 
 ### Результаты
 
-Ниже представлен формат и пример отчета:
+
 
 ```yaml
-investigation:                                       |  investigaion:
-  travel_variant: <вариант_прохода>                  |    travel_order: "direction"
-  experiments:                                       |    experiments:
-  - experiment:                                      |    - experiment:
-      number:                                        |        number: 1
-      input_data:                                    |        input_data:
-        buffer_size: <размер_буфера>                 |          buffer_size: "1mb"
-      results:                                       |        results:
-        duration: <продолжительность>                |          duration: "1ns"
-  - experiment:                                      |    - experiment:
-      number: <номер_эксперимента>                   |        number: 2
-      input_data:                                    |        input_data:
-        buffer_size: <размер_буфера>                 |          buffer_size: "2mb"
-      results:                                       |        results:
-        duration: <продолжительность>                |          duration: "2ns"
-                                                     |
-investigation:                                       |  investigation:
-...                                                  |  ...
+investigation:
+  travel variant: "random"
+    - experiment
+      number: 1
+      input data:
+        buffer_size: 8 KB
+      results:
+        duration: 37 nano seconds
+    - experiment
+      number: 2
+      input data:
+        buffer_size: 16 KB
+      results:
+        duration: 35 nano seconds
+    - experiment
+      number: 3
+      input data:
+        buffer_size: 32 KB
+      results:
+        duration: 31 nano seconds
+    - experiment
+      number: 4
+      input data:
+        buffer_size: 64 KB
+      results:
+        duration: 32 nano seconds
+    - experiment
+      number: 5
+      input data:
+        buffer_size: 128 KB
+      results:
+        duration: 32 nano seconds
+    - experiment
+      number: 6
+      input data:
+        buffer_size: 256 KB
+      results:
+        duration: 31 nano seconds
+    - experiment
+      number: 7
+      input data:
+        buffer_size: 512 KB
+      results:
+        duration: 38 nano seconds
+    - experiment
+      number: 8
+      input data:
+        buffer_size: 1 MB
+      results:
+        duration: 41 nano seconds
+    - experiment
+      number: 9
+      input data:
+        buffer_size: 2 MB
+      results:
+        duration: 43 nano seconds
+    - experiment
+      number: 10
+      input data:
+        buffer_size: 4 MB
+      results:
+        duration: 61 nano seconds
+    - experiment
+      number: 11
+      input data:
+        buffer_size: 6 MB
+      results:
+        duration: 66 nano seconds
+investigation:
+  travel variant: "direct"
+  experiments:
+    - experiment
+      number: 12
+      input data:
+        buffer_size: 8 KB
+      results:
+        duration: 3 nano seconds
+    - experiment
+      number: 13
+      input data:
+        buffer_size: 16 KB
+      results:
+        duration: 3 nano seconds
+    - experiment
+      number: 14
+      input data:
+        buffer_size: 32 KB
+      results:
+        duration: 3 nano seconds
+    - experiment
+      number: 15
+      input data:
+        buffer_size: 64 KB
+      results:
+        duration: 5 nano seconds
+    - experiment
+      number: 16
+      input data:
+        buffer_size: 128 KB
+      results:
+        duration: 3 nano seconds
+    - experiment
+      number: 17
+      input data:
+        buffer_size: 256 KB
+      results:
+        duration: 4 nano seconds
+    - experiment
+      number: 18
+      input data:
+        buffer_size: 512 KB
+      results:
+        duration: 4 nano seconds
+    - experiment
+      number: 19
+      input data:
+        buffer_size: 1 MB
+      results:
+        duration: 4 nano seconds
+    - experiment
+      number: 20
+      input data:
+        buffer_size: 2 MB
+      results:
+        duration: 5 nano seconds
+    - experiment
+      number: 21
+      input data:
+        buffer_size: 4 MB
+      results:
+        duration: 7 nano seconds
+    - experiment
+      number: 22
+      input data:
+        buffer_size: 6 MB
+      results:
+        duration: 11 nano seconds
+investigation:
+  travel variant: "reverse"
+    - experiment
+      number: 23
+      input data:
+        buffer_size: 8 KB
+      results:
+        duration: 4 nano seconds
+    - experiment
+      number: 24
+      input data:
+        buffer_size: 16 KB
+      results:
+        duration: 4 nano seconds
+    - experiment
+      number: 25
+      input data:
+        buffer_size: 32 KB
+      results:
+        duration: 4 nano seconds
+    - experiment
+      number: 26
+      input data:
+        buffer_size: 64 KB
+      results:
+        duration: 4 nano seconds
+    - experiment
+      number: 27
+      input data:
+        buffer_size: 128 KB
+      results:
+        duration: 4 nano seconds
+    - experiment
+      number: 28
+      input data:
+        buffer_size: 256 KB
+      results:
+        duration: 4 nano seconds
+    - experiment
+      number: 29
+      input data:
+        buffer_size: 512 KB
+      results:
+        duration: 4 nano seconds
+    - experiment
+      number: 30
+      input data:
+        buffer_size: 1 MB
+      results:
+        duration: 4 nano seconds
+    - experiment
+      number: 31
+      input data:
+        buffer_size: 2 MB
+      results:
+        duration: 5 nano seconds
+    - experiment
+      number: 32
+      input data:
+        buffer_size: 4 MB
+      results:
+        duration: 8 nano seconds
+    - experiment
+      number: 33
+      input data:
+        buffer_size: 6 MB
+      results:
+        duration: 11 nano seconds
+...                                                  
 ```
 
 ### Рекомендации
