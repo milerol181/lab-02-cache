@@ -99,7 +99,7 @@ void experiment::print_to_report(const unsigned& byte_size, double time)
          << std::endl << "    results: " << std::endl
          << "      duration: " << time_string << std::endl;
 }
-const std::ostringstream& experiment::getOut() const { return out; }
+const std::ostringstream& experiment::get_out() const { return out; }
 void experiment::reverse(const unsigned int& byte_size) {
   {
     unsigned size = byte_size/sizeof(unsigned int);

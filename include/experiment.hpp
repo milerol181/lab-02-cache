@@ -12,25 +12,22 @@
 
 class experiment {
  public:
-  void set_byte_sizes(const std::vector<unsigned int> &size_cash);
-  void create_arr(const unsigned int &size_in_byte);
-  void warm_up_cash(const unsigned int &size_in_byte);
   void main_experiment();
-  void direct(const unsigned int& byte_size);
-  void reverse(const unsigned int& byte_size);
-  void random(const unsigned int& byte_size);
-  void print_to_report(const unsigned& byte_size, double time);
+  const std::ostringstream &get_out() const;
   experiment();
+  void set_byte_sizes(const std::vector<unsigned int> &size_cash);
+
  private:
   std::vector<unsigned int> byte_sizes;
   std::vector<unsigned int> arr;
   std::mt19937 engine;
-  std::random_device rd;
   std::ostringstream out;
-
- public:
-  const std::ostringstream &getOut() const;
- private:
+  void warm_up_cash(const unsigned int &size_in_byte);
+  void create_arr(const unsigned int &size_in_byte);
+  void direct(const unsigned int& byte_size);
+  void reverse(const unsigned int& byte_size);
+  void random(const unsigned int& byte_size);
+  void print_to_report(const unsigned& byte_size, double time);
   unsigned int number_exp;
 };
 

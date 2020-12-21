@@ -19,6 +19,6 @@ TEST(Example, second) {
   experiment cash;
   cash.set_byte_sizes(cash_size);
   cash.main_experiment();
-  std::cout << cash.getOut().str() << std::endl;
+  std::cout << cash.get_out().str() << std::endl;
   EXPECT_TRUE(true);
 }
