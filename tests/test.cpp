@@ -16,7 +16,6 @@ TEST(Example, second) {
   sizes.size_l3 = 4096 * 1024;
   experiment cash;
   cash.set_byte_sizes(sizes);
-  //cash.main_experiment();
   std::cout << cash << std::endl;
   EXPECT_TRUE(true);
 }
